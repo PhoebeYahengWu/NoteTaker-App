@@ -51,7 +51,11 @@ var renderActiveNote = function() {
 
 // Get the note data from the inputs, save it to the db and update the view
 var handleNoteSave = function() {
+
+  var id = "id" + Math.random().toString(16).slice(2);
+
   var newNote = {
+    id: id,
     title: $noteTitle.val(),
     text: $noteText.val()
   };
@@ -67,9 +71,7 @@ var handleNoteDelete = function(event) {
   // prevents the click listener for the list from being called when the button inside of it is clicked
   event.stopPropagation();
 
-  var note = $(this)
-    .parent(".list-group-item")
-    .data();
+  var note = $(this).parent(".list-group-item").data();
 
   if (activeNote.id === note.id) {
     activeNote = {};
