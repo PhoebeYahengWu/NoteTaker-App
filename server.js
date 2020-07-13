@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
 const path = require("path");
+const mongoose = require('mongoose');
 
 
 //the port to bind should be either 8080 or process.env.PORT so that node express server can be deployed to Heroku
@@ -18,6 +19,11 @@ app.use(bodyParser.json())
 
 //use the following code to serve images, CSS files, and JavaScript files in a directory named public
 app.use(express.static('public'));
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/note", {
+	useNewUrlParser: true,
+	useFindAndModify: false
+})
 
 //The code below returns a function
 //var func = require('./routes/htmlRoutes.js');
