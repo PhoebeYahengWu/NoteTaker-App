@@ -35,10 +35,9 @@ app.post("/api/notes", ({ body }, res) => {
 //DELETE a specific note from all notes
 //res.json() used to return a response object
 app.delete("/api/notes/:id", (req, res) => {
-	var noteID = req.params.id;
-	Note.remove({id: noteID}, (err, result) => {
-		if(err) return console.log(err)
-		console.log(req.body) 
-	})
+	Note.findByIdAndRemove({id: req.params.id}, 
+		function(err, docs){
+		 if(err) res.json(err);
+	 });
 });
 };
