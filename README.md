@@ -17,7 +17,7 @@ Note Taker is a full stack web application that allows users to create, organize
 
 
 ## TechUsed
-MongoDB, Express, JavaScript
+MongoDB, Express, JavaScript, Heroku
 
 ## Link
 https://notebook-with-express.herokuapp.com/
