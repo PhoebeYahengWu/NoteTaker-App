@@ -26,8 +26,10 @@ var saveNote = function(note) {
 
 // A function for deleting a note from the db
 var deleteNote = function(id) {
+  console.log("ajax_id",id)
+
   return $.ajax({
-    url: "api/notes/" + id,
+    url: "/api/notes/" + id,
     method: "DELETE"
   });
 };
@@ -79,11 +81,12 @@ var handleNoteDelete = function(event) {
     activeNote = {};
   }
 
-  deleteNote(note.id).then(() => {
-    console.log("I am here")
-    getAndRenderNotes();
-    renderActiveNote();
-  });
+
+  console.log("deleteNote function",note.id)
+
+  deleteNote(note.id)
+  getAndRenderNotes();
+  renderActiveNote();
 };
 
 // Sets the activeNote and displays it
