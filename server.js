@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 //use the following code to serve images, CSS files, and JavaScript files in a directory named public
 app.use(express.static('public'));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/note", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://phoebe:Potato123!@ds249818.mlab.com:49818/heroku_jrcnwlj4", {
 	useNewUrlParser: true,
 	useFindAndModify: false
 })
