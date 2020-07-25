@@ -2,7 +2,7 @@
 ![NOTE](https://user-images.githubusercontent.com/52837649/87323552-ecb04880-c4fc-11ea-8233-dab0243d7bf6.gif)
 
 ## Description
-Note Taker is a full stack web application that allows users to create, organize and delete notes. All notes are connected and saved in the MongoDB.
+Note Taker is a full-stack web application that allows users to create, organize, and delete notes. All notes are connected and saved in the MongoDB.
 
 
 ## Table of Contents
